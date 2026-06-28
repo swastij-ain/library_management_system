@@ -1,0 +1,190 @@
+{
+ "actions": [],
+ "allow_rename": 0,
+ "autoname": "naming_series:",
+ "creation": "2026-06-28 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "is_submittable": 1,
+ "field_order": [
+  "naming_series",
+  "member",
+  "book_issue",
+  "column_break_3",
+  "fine_date",
+  "status",
+  "section_break_calc",
+  "overdue_days",
+  "rate_per_day",
+  "column_break_calc",
+  "amount",
+  "section_break_post",
+  "journal_entry",
+  "waiver_reason",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "default": "FINE-.YYYY.-.#####",
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Series",
+   "options": "FINE-.YYYY.-.#####",
+   "reqd": 1
+  },
+  {
+   "fieldname": "member",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Member",
+   "options": "Library Member",
+   "reqd": 1
+  },
+  {
+   "fieldname": "book_issue",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Book Issue",
+   "options": "Book Issue"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "default": "Today",
+   "fieldname": "fine_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "Fine Date",
+   "reqd": 1
+  },
+  {
+   "default": "Unpaid",
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Status",
+   "options": "Unpaid\nPaid\nWaived",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_calc",
+   "fieldtype": "Section Break",
+   "label": "Calculation"
+  },
+  {
+   "fieldname": "overdue_days",
+   "fieldtype": "Int",
+   "label": "Overdue Days",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "rate_per_day",
+   "fieldtype": "Currency",
+   "label": "Rate Per Day",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_calc",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_post",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "fieldname": "journal_entry",
+   "fieldtype": "Link",
+   "label": "Journal Entry",
+   "options": "Journal Entry",
+   "read_only": 1
+  },
+  {
+   "depends_on": "eval:doc.status=='Waived'",
+   "fieldname": "waiver_reason",
+   "fieldtype": "Small Text",
+   "label": "Waiver Reason"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Fine",
+   "print_hide": 1,
+   "read_only": 1
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-28 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Fine",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "amend": 1,
+   "cancel": 1,
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Library Administrator",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Library Staff",
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Staff"
+  },
+  {
+   "read": 1,
+   "report": 1,
+   "role": "Management"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

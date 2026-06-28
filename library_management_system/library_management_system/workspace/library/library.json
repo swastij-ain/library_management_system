@@ -1,0 +1,243 @@
+{
+ "charts": [
+  {
+   "chart_name": "Library Fine Collection Trend",
+   "label": "Fine Collection Trend"
+  },
+  {
+   "chart_name": "Library Top Books",
+   "label": "Top Books"
+  }
+ ],
+ "content": "[{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Catalog & Members</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Catalog\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Members\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Lending\",\"col\":4}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"header\",\"data\":{\"text\":\"<span class=\\\"h4\\\">Fines & Accounting</span>\",\"col\":12}},{\"type\":\"card\",\"data\":{\"card_name\":\"Fines\",\"col\":4}},{\"type\":\"card\",\"data\":{\"card_name\":\"Reports\",\"col\":8}},{\"type\":\"spacer\",\"data\":{\"col\":12}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Library Fine Collection Trend\",\"col\":6}},{\"type\":\"chart\",\"data\":{\"chart_name\":\"Library Top Books\",\"col\":6}}]",
+ "creation": "2026-06-28 00:00:00",
+ "docstatus": 0,
+ "doctype": "Workspace",
+ "for_user": "",
+ "hide_custom": 0,
+ "icon": "book",
+ "is_hidden": 0,
+ "label": "Library",
+ "links": [
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Catalog",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book",
+   "link_count": 0,
+   "link_to": "Book",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book Category",
+   "link_count": 0,
+   "link_to": "Book Category",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Members",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Member",
+   "link_count": 0,
+   "link_to": "Library Member",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Lending",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Book Issue",
+   "link_count": 0,
+   "link_to": "Book Issue",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fines",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fine",
+   "link_count": 0,
+   "link_to": "Fine",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Fine Payment",
+   "link_count": 0,
+   "link_to": "Fine Payment",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Library Settings",
+   "link_count": 0,
+   "link_to": "Library Settings",
+   "link_type": "DocType",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "hidden": 0,
+   "is_query_report": 0,
+   "label": "Reports",
+   "link_count": 0,
+   "onboard": 0,
+   "type": "Card Break"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Overdue Books",
+   "link_count": 0,
+   "link_to": "Overdue Books",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Outstanding Fines Summary",
+   "link_count": 0,
+   "link_to": "Outstanding Fines Summary",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Fine Collection Report",
+   "link_count": 0,
+   "link_to": "Fine Collection Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Member Activity Report",
+   "link_count": 0,
+   "link_to": "Member Activity Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  },
+  {
+   "dependencies": "",
+   "hidden": 0,
+   "is_query_report": 1,
+   "label": "Book Utilization Report",
+   "link_count": 0,
+   "link_to": "Book Utilization Report",
+   "link_type": "Report",
+   "onboard": 0,
+   "type": "Link"
+  }
+ ],
+ "modified": "2026-06-28 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Library",
+ "number_cards": [],
+ "owner": "Administrator",
+ "public": 1,
+ "quick_lists": [],
+ "roles": [],
+ "sequence_id": 50.0,
+ "shortcuts": [
+  {
+   "color": "Blue",
+   "doc_view": "List",
+   "label": "Books",
+   "link_to": "Book",
+   "type": "DocType"
+  },
+  {
+   "color": "Green",
+   "doc_view": "List",
+   "label": "Members",
+   "link_to": "Library Member",
+   "type": "DocType"
+  },
+  {
+   "color": "Orange",
+   "doc_view": "List",
+   "label": "Book Issues",
+   "link_to": "Book Issue",
+   "type": "DocType"
+  },
+  {
+   "color": "Red",
+   "doc_view": "List",
+   "label": "Fines",
+   "link_to": "Fine",
+   "type": "DocType"
+  },
+  {
+   "color": "Grey",
+   "doc_view": "",
+   "label": "Settings",
+   "link_to": "Library Settings",
+   "type": "DocType"
+  }
+ ],
+ "title": "Library"
+}

@@ -1,0 +1,102 @@
+{
+ "actions": [],
+ "creation": "2026-06-28 00:00:00",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "issingle": 1,
+ "field_order": [
+  "default_loan_period_days",
+  "fine_per_day",
+  "section_break_accounts",
+  "company",
+  "default_receivable_account",
+  "column_break_accounts",
+  "default_income_account",
+  "default_cash_account"
+ ],
+ "fields": [
+  {
+   "default": "14",
+   "fieldname": "default_loan_period_days",
+   "fieldtype": "Int",
+   "label": "Default Loan Period (Days)",
+   "non_negative": 1,
+   "reqd": 1
+  },
+  {
+   "default": "0",
+   "description": "Per-day fine charged on overdue returns.",
+   "fieldname": "fine_per_day",
+   "fieldtype": "Currency",
+   "label": "Fine Per Day"
+  },
+  {
+   "fieldname": "section_break_accounts",
+   "fieldtype": "Section Break",
+   "label": "Accounting"
+  },
+  {
+   "description": "Company under which library accounting entries are posted.",
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "default_receivable_account",
+   "fieldtype": "Link",
+   "label": "Default Receivable Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "column_break_accounts",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "default_income_account",
+   "fieldtype": "Link",
+   "label": "Default Library Fine Income Account",
+   "options": "Account"
+  },
+  {
+   "fieldname": "default_cash_account",
+   "fieldtype": "Link",
+   "label": "Default Cash/Bank Account",
+   "options": "Account"
+  }
+ ],
+ "links": [],
+ "modified": "2026-06-28 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Library Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "Library Administrator",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "Library Staff"
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": [],
+ "track_changes": 1
+}

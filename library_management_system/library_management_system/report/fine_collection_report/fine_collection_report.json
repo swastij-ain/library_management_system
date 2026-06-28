@@ -1,0 +1,24 @@
+{
+ "add_total_row": 1,
+ "creation": "2026-06-28 00:00:00",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "modified": "2026-06-28 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Fine Collection Report",
+ "owner": "Administrator",
+ "query": "SELECT\n  d.day AS `Date:Date:110`,\n  COALESCE(SUM(d.raised), 0) AS `Raised:Currency:140`,\n  COALESCE(SUM(d.collected), 0) AS `Collected:Currency:140`,\n  COALESCE(SUM(d.waived), 0) AS `Waived:Currency:140`\nFROM (\n  SELECT f.fine_date AS day, f.amount AS raised, 0 AS collected, 0 AS waived\n  FROM `tabFine` f\n  WHERE f.docstatus = 1 AND f.fine_date BETWEEN %(from_date)s AND %(to_date)s\n  UNION ALL\n  SELECT fp.payment_date AS day, 0, fp.amount, 0\n  FROM `tabFine Payment` fp\n  WHERE fp.docstatus = 1 AND fp.payment_date BETWEEN %(from_date)s AND %(to_date)s\n  UNION ALL\n  SELECT f.fine_date AS day, 0, 0, f.amount\n  FROM `tabFine` f\n  WHERE f.docstatus = 1 AND f.status = 'Waived'\n    AND f.fine_date BETWEEN %(from_date)s AND %(to_date)s\n) d\nGROUP BY d.day\nORDER BY d.day",
+ "ref_doctype": "Fine",
+ "report_name": "Fine Collection Report",
+ "report_type": "Query Report",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Library Administrator"},
+  {"role": "Library Staff"},
+  {"role": "Accounts Staff"},
+  {"role": "Management"}
+ ]
+}

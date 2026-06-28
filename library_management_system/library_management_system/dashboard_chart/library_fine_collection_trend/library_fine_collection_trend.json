@@ -1,0 +1,23 @@
+{
+ "chart_name": "Library Fine Collection Trend",
+ "chart_type": "Sum",
+ "creation": "2026-06-28 00:00:00",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Fine Payment",
+ "based_on": "payment_date",
+ "value_based_on": "amount",
+ "filters_json": "[[\"Fine Payment\",\"docstatus\",\"=\",1]]",
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Library Management System",
+ "name": "Library Fine Collection Trend",
+ "owner": "Administrator",
+ "report_name": null,
+ "time_interval": "Monthly",
+ "timeseries": 1,
+ "timespan": "Last Year",
+ "type": "Line",
+ "use_report_chart": 0,
+ "color": "#449CF0"
+}

@@ -1,0 +1,20 @@
+{
+ "chart_name": "Library Top Books",
+ "chart_type": "Count",
+ "creation": "2026-06-28 00:00:00",
+ "docstatus": 0,
+ "doctype": "Dashboard Chart",
+ "document_type": "Book Issue",
+ "group_by_based_on": "book",
+ "group_by_type": "Count",
+ "filters_json": "[[\"Book Issue\",\"docstatus\",\"=\",1]]",
+ "is_public": 1,
+ "is_standard": 1,
+ "module": "Library Management System",
+ "name": "Library Top Books",
+ "owner": "Administrator",
+ "number_of_groups": 10,
+ "timeseries": 0,
+ "type": "Bar",
+ "use_report_chart": 0
+}
