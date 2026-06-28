@@ -1,0 +1,23 @@
+{
+ "add_total_row": 1,
+ "creation": "2026-06-28 00:00:00",
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "is_standard": "Yes",
+ "modified": "2026-06-28 00:00:00",
+ "modified_by": "Administrator",
+ "module": "Library Management System",
+ "name": "Member Activity Report",
+ "owner": "Administrator",
+ "query": "SELECT\n  lm.name AS `Member:Link/Library Member:140`,\n  lm.member_name AS `Name:Data:200`,\n  lm.member_type AS `Type:Data:100`,\n  COALESCE(SUM(CASE WHEN bi.issue_date BETWEEN %(from_date)s AND %(to_date)s THEN 1 ELSE 0 END), 0) AS `Issues:Int:90`,\n  COALESCE(SUM(CASE WHEN bi.return_date BETWEEN %(from_date)s AND %(to_date)s THEN 1 ELSE 0 END), 0) AS `Returns:Int:90`,\n  COALESCE(SUM(CASE WHEN bi.status = 'Overdue' AND bi.docstatus = 1 THEN 1 ELSE 0 END), 0) AS `Currently Overdue:Int:140`\nFROM `tabLibrary Member` lm\nLEFT JOIN `tabBook Issue` bi ON bi.member = lm.name AND bi.docstatus = 1\nGROUP BY lm.name\nORDER BY `Issues` DESC",
+ "ref_doctype": "Book Issue",
+ "report_name": "Member Activity Report",
+ "report_type": "Query Report",
+ "roles": [
+  {"role": "System Manager"},
+  {"role": "Library Administrator"},
+  {"role": "Library Staff"},
+  {"role": "Management"}
+ ]
+}

@@ -1,0 +1,30 @@
+[
+ {
+  "doctype": "Role",
+  "name": "Library Administrator",
+  "role_name": "Library Administrator",
+  "desk_access": 1,
+  "disabled": 0
+ },
+ {
+  "doctype": "Role",
+  "name": "Library Staff",
+  "role_name": "Library Staff",
+  "desk_access": 1,
+  "disabled": 0
+ },
+ {
+  "doctype": "Role",
+  "name": "Accounts Staff",
+  "role_name": "Accounts Staff",
+  "desk_access": 1,
+  "disabled": 0
+ },
+ {
+  "doctype": "Role",
+  "name": "Management",
+  "role_name": "Management",
+  "desk_access": 1,
+  "disabled": 0
+ }
+]

@@ -5,10 +5,19 @@ app_description = "A Frappe-based Library Management System for managing books, 
 app_email = "swastijain170302@gmail.com"
 app_license = "mit"
 
-# Apps
-# ------------------
+required_apps = ["erpnext"]
 
-# required_apps = []
+scheduler_events = {
+	"daily": [
+		"library_management_system.library_management_system.doctype.book_issue.book_issue.mark_overdue",
+		"library_management_system.library_management_system.doctype.library_member.library_member.expire_memberships",
+	]
+}
+
+fixtures = [
+	{"doctype": "Role", "filters": [["role_name", "in", ["Library Administrator", "Library Staff", "Accounts Staff", "Management"]]]},
+	{"doctype": "Notification", "filters": [["name", "in", ["Library Overdue Reminder"]]]}
+]
 
 # Each item in the list will be shown as an app in the apps page
 # add_to_apps_screen = [

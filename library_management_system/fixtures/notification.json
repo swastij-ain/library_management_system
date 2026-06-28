@@ -1,0 +1,23 @@
+[
+ {
+  "doctype": "Notification",
+  "name": "Library Overdue Reminder",
+  "subject": "Library Book Overdue: {{ doc.book }}",
+  "document_type": "Book Issue",
+  "event": "Days After",
+  "date_changed": "due_date",
+  "days_in_advance": 1,
+  "condition": "doc.status in ('Issued', 'Overdue') and doc.docstatus == 1",
+  "channel": "Email",
+  "enabled": 0,
+  "send_to_all_assignees": 0,
+  "is_standard": 0,
+  "module": "Library Management System",
+  "recipients": [
+   {
+    "receiver_by_document_field": "member.email"
+   }
+  ],
+  "message": "<p>Dear {{ frappe.db.get_value('Library Member', doc.member, 'member_name') }},</p>\n\n<p>This is a reminder that the book <b>{{ doc.book }}</b> issued to you on {{ doc.issue_date }} was due on <b>{{ doc.due_date }}</b>.</p>\n\n<p>Please return it at the earliest. An overdue fine is accruing at the configured per-day rate from Library Settings.</p>\n\n<p>Regards,<br>Library Team</p>"
+ }
+]
